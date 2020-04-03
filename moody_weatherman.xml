@@ -1,0 +1,325 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id=":V{kdFVT?:6jo}/)|1|;">forecast</variable>
+    <variable id="nr(=,6/~Ul.ZZ_`!(~jV">temperature</variable>
+  </variables>
+  <block type="on_keyphrase" id="DHpw;eHwQ;3(^jNaX1S~" x="-137" y="-277">
+    <value name="keyphrase">
+      <shadow type="text">
+        <field name="TEXT"/>
+      </shadow>
+      <block type="text" id="itVnj{ldxx-zo2v,+;uH">
+        <field name="TEXT">is it raining</field>
+      </block>
+    </value>
+    <statement name="CODE">
+      <block type="variables_set" id="x,Jl]POfwL!XzfI[QZZ}">
+        <field name="VAR" id=":V{kdFVT?:6jo}/)|1|;">forecast</field>
+        <value name="VALUE">
+          <block type="weather_data_here_dd" id="sMNXEt3],.B4P=MwhrOn">
+            <field name="weather_type">summary</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if_try" id="aU`Jt}6-V}vh$K`t9daQ">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="7N6o/gK8_sg~E:O;SI9G">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="L867a*lNR15ZogSPbvWc">
+                    <field name="VAR" id=":V{kdFVT?:6jo}/)|1|;">forecast</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="multi_text" id="X%5!uYE4j3%Us=O`j1^w">
+                    <field name="NAME">rain</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="speak" id="m5z~w{O3sl*+:w$,_ge*">
+                <value name="MESSAGE">
+                  <shadow type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="text" id="P;-Q[svI2s.zdSrw!_-V">
+                    <field name="TEXT">yes</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="speak" id="E1%|#J7Id^ug_MEV~]C@">
+                <value name="MESSAGE">
+                  <shadow type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="text" id="U@:vE#%rY2n{_w7ysH(y">
+                    <field name="TEXT">no</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="on_phrase_examples" id="})a]]Epnx5Oc,52wwz(Y" x="167" y="-174">
+    <mutation xmlns="http://www.w3.org/1999/xhtml" items="3"></mutation>
+    <value name="PVALUE1">
+      <shadow type="multi_text" id="@qec]{Tm#2Gn|+@,W_B*">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="C/lreY8aW.*.?m3zrB7|">
+        <field name="NAME">what's the temperature outside</field>
+      </block>
+    </value>
+    <value name="PVALUE2">
+      <shadow type="multi_text" id="F-_D?]{c.M/BMut6JkiM">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="8u|9r!UIBHHJ3._7lY?h">
+        <field name="NAME">how is the temperature</field>
+      </block>
+    </value>
+    <value name="PVALUE3">
+      <shadow type="multi_text" id="HGC$WHIV?=A(nO64f%}8">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="cbIq07#QVanjxrMYunRu">
+        <field name="NAME">temperature reading</field>
+      </block>
+    </value>
+    <statement name="CODE">
+      <block type="variables_set" id="z#V#95T{3@`aD_O~vt#k">
+        <field name="VAR" id="nr(=,6/~Ul.ZZ_`!(~jV">temperature</field>
+        <value name="VALUE">
+          <block type="weather_data_here_dd" id="OGg:dQGjlr0w`ax@7WvV">
+            <field name="weather_type">temperature</field>
+          </block>
+        </value>
+        <next>
+          <block type="speak" id="##@*AA0iLmjg]Sjtt2j8">
+            <value name="MESSAGE">
+              <shadow type="text" id=".8KVGuF@fU$Ai7@3Uxg.">
+                <field name="TEXT"/>
+              </shadow>
+              <block type="multi_text" id=";fEm.fOlYXhLCTmXxGu0">
+                <field name="NAME">current temperature is </field>
+                <value name="NAME">
+                  <block type="variables_get" id="]TPt-wXyT@(u(4`w{Ew~">
+                    <field name="VAR" id="nr(=,6/~Ul.ZZ_`!(~jV">temperature</field>
+                    <value name="VALUE">
+                      <block type="multi_text" id="4eGa_.l(V]/3mjuDEw6^">
+                        <field name="NAME"> degrees</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="on_phrase_examples" id="A9:*EiySgl#2@D_o8(f#" x="-107" y="-25">
+    <mutation xmlns="http://www.w3.org/1999/xhtml" items="2"></mutation>
+    <value name="PVALUE1">
+      <shadow type="multi_text" id="v*+6DXRxl|gyn%|Dbo_5">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="h[yyBJR:.?(eud*%1JfB">
+        <field name="NAME">what is the weather like</field>
+      </block>
+    </value>
+    <value name="PVALUE2">
+      <shadow type="multi_text" id="Zw)LSxTa6UX)e`khz4|d">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id=":v:ep6boCi:8nANwi`d;">
+        <field name="NAME">how is the weather</field>
+      </block>
+    </value>
+    <statement name="CODE">
+      <block type="variables_set" id="@xj6$Bvh1@MW|b@VHNrC">
+        <field name="VAR" id=":V{kdFVT?:6jo}/)|1|;">forecast</field>
+        <value name="VALUE">
+          <block type="weather_data_here_dd" id="bD0O/~?qMzlM+QG7FF7{">
+            <field name="weather_type">summary</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if_try" id=";9ZNhP~,3$aZa~^k1Gjv">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" elseif="2" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="2?cPgza2LOTr;{0lA~aq">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="*~u./}|*S-={sLV^Z=AC">
+                    <field name="VAR" id=":V{kdFVT?:6jo}/)|1|;">forecast</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="multi_text" id="LLDUDqCQQ]WO#Yqw1-7)">
+                    <field name="NAME">cloudy</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="speak" id="kYCpNcV*^PE+ibeU!@B$">
+                <value name="MESSAGE">
+                  <shadow type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="text" id="=22prT9f0,Su(QQ{kNoW">
+                    <field name="TEXT">you can forget about sunscreen today because it is cloudy</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id="OEcZ]`L~wpsipV;=W~I~">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="ekD?UxRpT{.~CIjQ:j/R">
+                    <field name="VAR" id=":V{kdFVT?:6jo}/)|1|;">forecast</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="multi_text" id=",S}/Yd,*0Cx^3vo`tskY">
+                    <field name="NAME">sunny</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="speak" id="dMV{]gVN2L.NqRcx@.0I">
+                <value name="MESSAGE">
+                  <shadow type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="text" id="efk;+rNz;:RFfjQDUsw.">
+                    <field name="TEXT">Time to hit the beach and get a tan</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <value name="IF2">
+              <block type="logic_compare" id="EAh`/.{PVTMk{F~F%:Ik">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="variables_get" id="HMW!T6nJZSo.)L3z]]n+">
+                    <field name="VAR" id=":V{kdFVT?:6jo}/)|1|;">forecast</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="multi_text" id="/3rrsFsvd}m_(VsNQ{jI">
+                    <field name="NAME">rain</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="speak" id="55{sc`@Qg23~.Wc=_3k#">
+                <value name="MESSAGE">
+                  <shadow type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="text" id="2}lZehm;kj(Z.~%`OJO?">
+                    <field name="TEXT">It’s going to rain cats and dogs today</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="speak" id="q}*fK_994GIzt@g1Zh!(">
+                <value name="MESSAGE">
+                  <shadow type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="text" id="A!d.5:0cXze16PT.Vqr/">
+                    <field name="TEXT">stick your head outside the window and check it yourself</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+            <next>
+              <block type="variables_set" id="ArQk#jp8zsAAWfOVk1u?">
+                <field name="VAR" id="nr(=,6/~Ul.ZZ_`!(~jV">temperature</field>
+                <value name="VALUE">
+                  <block type="weather_data_here_dd" id="gH/xh6_swVMl@h|l*rA,">
+                    <field name="weather_type">temperature</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if_try" id="@uqr6Yk[8Jx}8a?Dk]%J">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" elseif="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="rl/8x.IjAtv{?#76]`nt">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="variables_get" id="t1;4HZfGUmV%YKZ[Hk(D">
+                            <field name="VAR" id="nr(=,6/~Ul.ZZ_`!(~jV">temperature</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="(9IB007?c;~UH!P!JL_F">
+                            <field name="NUM">25</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="speak" id="*9@?q:jl0ptc}[jJZH6:">
+                        <value name="MESSAGE">
+                          <shadow type="text">
+                            <field name="TEXT"/>
+                          </shadow>
+                          <block type="text" id="TqaEhWz6wVW/Uf9=K;9P">
+                            <field name="TEXT">crank that A/C cause it’s gonna be a hot one</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                    <value name="IF1">
+                      <block type="logic_compare" id="i$O!w_^?Am{J:yRT2|zW">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="variables_get" id="dHi%X0gHw:9cfy27QI^u">
+                            <field name="VAR" id="nr(=,6/~Ul.ZZ_`!(~jV">temperature</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="@TPYOivOI1L@i$K#;H?3">
+                            <field name="NUM">0</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO1">
+                      <block type="speak" id="B9V?OXAQODA(BD_#aRwf">
+                        <value name="MESSAGE">
+                          <shadow type="text">
+                            <field name="TEXT"/>
+                          </shadow>
+                          <block type="text" id="43zOD;snN`qJ}b*Wf.hS">
+                            <field name="TEXT">Don’t forget your winter coat because it’s gonna be cold as ice ice baby!</field>
+                          </block>
+                        </value>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

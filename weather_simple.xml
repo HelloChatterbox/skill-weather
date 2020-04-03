@@ -1,0 +1,173 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="?x_!YV4[Qu--|Zs7u0B+">location</variable>
+  </variables>
+  <block type="on_phrase_examples" id="A9:*EiySgl#2@D_o8(f#" x="33" y="-129">
+    <mutation xmlns="http://www.w3.org/1999/xhtml" items="2"></mutation>
+    <value name="PVALUE1">
+      <shadow type="multi_text" id="L0@|D)RnUTDNT!UIm6/*">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="h[yyBJR:.?(eud*%1JfB">
+        <field name="NAME">what is the weather like</field>
+      </block>
+    </value>
+    <value name="PVALUE2">
+      <shadow type="multi_text" id="I7I.AzUGzD#yGO3wSe9|">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id=":v:ep6boCi:8nANwi`d;">
+        <field name="NAME">how is the weather</field>
+      </block>
+    </value>
+    <statement name="CODE">
+      <block type="speak_weather_auto" id="Vw-sQ(pRJD9Cp2|odvNk"/>
+    </statement>
+  </block>
+  <block type="on_phrase_examples" id="L5-H]`N_0N#e1z|D+m05" x="296" y="-30">
+    <mutation xmlns="http://www.w3.org/1999/xhtml" items="2"></mutation>
+    <value name="PVALUE1">
+      <shadow type="multi_text" id="f#%9jq2Zh8-5=Il8geBQ">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="zwFt_1bnfb4DAGG188ca">
+        <field name="NAME">what is the weather like in</field>
+        <value name="NAME">
+          <block type="variables_get" id="J_vKV/Sq]{AF31A#uY]@">
+            <field name="VAR" id="?x_!YV4[Qu--|Zs7u0B+">location</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <value name="PVALUE2">
+      <shadow type="multi_text" id="*;tj~pR62yU7jM2Il[/s">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="gK0daD5iUg}R~oo!dtg!">
+        <field name="NAME">how is the weather in</field>
+        <value name="NAME">
+          <block type="variables_get" id=",x)0H26od?@zKumAZIDg">
+            <field name="VAR" id="?x_!YV4[Qu--|Zs7u0B+">location</field>
+          </block>
+        </value>
+      </block>
+    </value>
+    <statement name="CODE">
+      <block type="speak_weather" id="G0ESx-/*1R4j:JY+q0N^">
+        <value name="city">
+          <block type="variables_get" id="SLM]90ub0,/u}]{-di#2">
+            <field name="VAR" id="?x_!YV4[Qu--|Zs7u0B+">location</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <block type="on_phrase_examples" id="4V`mrRBLW+CN?:mk^myg" x="55" y="84">
+    <mutation xmlns="http://www.w3.org/1999/xhtml" items="6"></mutation>
+    <value name="PVALUE1">
+      <shadow type="multi_text" id="90-AI.-Rv!YLSy8g1(qR">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="h?|8Oq7=igMbdcxy_XFn">
+        <field name="NAME">today's weather</field>
+      </block>
+    </value>
+    <value name="PVALUE2">
+      <shadow type="multi_text" id="SaywdCh7(5V)~^VQzX0H">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="[~|vnamZRjhbm1U|lHJy">
+        <field name="NAME">how is the weather today</field>
+      </block>
+    </value>
+    <value name="PVALUE3">
+      <shadow type="multi_text" id="/=!2l}Ra_%hNBCtKTf3P">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="o^}mvB56d7wtB*,tRO~L">
+        <field name="NAME">weather today</field>
+      </block>
+    </value>
+    <value name="PVALUE4">
+      <shadow type="multi_text" id="EhjKt*CD9:In@M?_day*">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id=":tmP8g^a@+X8ud$aN2]E">
+        <field name="NAME">what is the weather like today</field>
+      </block>
+    </value>
+    <value name="PVALUE5">
+      <shadow type="multi_text" id="$AHQv~PGXt:r%BCe.${|">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="yR3}bmgjyiNbXA=vY`Y:">
+        <field name="NAME">hourly forecast</field>
+      </block>
+    </value>
+    <value name="PVALUE6">
+      <shadow type="multi_text" id="OnOpvci8Y9=Q+?l2J^/i">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="QM/#mBq;z`P8z6[;`n0Y">
+        <field name="NAME">hourly weather forecast</field>
+      </block>
+    </value>
+    <statement name="CODE">
+      <block type="speak_hourly_weather" id="]R(:,MhNgKS?Qyn(8|{v"/>
+    </statement>
+  </block>
+  <block type="on_phrase_examples" id="XY[cVEmAP0Fozf8xD3!3" x="424" y="290">
+    <mutation xmlns="http://www.w3.org/1999/xhtml" items="6"></mutation>
+    <value name="PVALUE1">
+      <shadow type="multi_text" id="JL]eByndutd0%bcc]nIW">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id=":}sLo%Nbg3q}v|U?x|o1">
+        <field name="NAME">this week's weather</field>
+      </block>
+    </value>
+    <value name="PVALUE2">
+      <shadow type="multi_text" id="yK30oJVS^MhrigABNt#X">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="y?*G:S1D`o!Ps*eg;SBi">
+        <field name="NAME">how is the weather this week</field>
+      </block>
+    </value>
+    <value name="PVALUE3">
+      <shadow type="multi_text" id="O7nPv`/@3^3n$!Q4wD(W">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="AB?B]R7*.54e{Gh~215F">
+        <field name="NAME">weekly weather forecast</field>
+      </block>
+    </value>
+    <value name="PVALUE4">
+      <shadow type="multi_text" id="[^24mlVqZ$fw`)S!%(09">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="CK`oEok%nx]8E!=%/d%7">
+        <field name="NAME">what is the weather like this week</field>
+      </block>
+    </value>
+    <value name="PVALUE5">
+      <shadow type="multi_text" id="lNWcxZz@b8$Mx#?=%lba">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="r-#Peg9,z^*Sik,%|1CU">
+        <field name="NAME">weekly forecast</field>
+      </block>
+    </value>
+    <value name="PVALUE6">
+      <shadow type="multi_text" id="2dUWJ@d-kM8%3KE;4n?X">
+        <field name="NAME"/>
+      </shadow>
+      <block type="multi_text" id="(B7I8$[Q)YL1KEx04CP:">
+        <field name="NAME">what's the weekly forecast</field>
+      </block>
+    </value>
+    <statement name="CODE">
+      <block type="speak_weekly_weather" id="L3(EykeGbv=za@2OPksf"/>
+    </statement>
+  </block>
+</xml>

@@ -1,14 +1,27 @@
 
-# Astronauts - Chatterbox Skill
+# Weather - Chatterbox Skill
 
-Find out who is currently in orbit
+Get weather data from [DarkSky](https://darksky.net)
 
-Using chatterbox web_apis extensions you can query the [people in space API](http://open-notify.org/Open-Notify-API/People-In-Space/)
+units (metric or imperial) can be set in the configuration tab
+
+NOTE: There are multiple skills in this repo
+
+## Basic weather skill
 
 Examples
 
-    "Who is in space?"
-    "How many people in orbit?"
+    "how is the weather"
+    "what is the weather like in {location}"
+    "what's the weekly forecast"
 
-![](astronauts.png)
+![](weather_simple.png)
 
+
+## Moody weather man skill
+
+Examples
+
+    "how is the weather"
+
+![](weather_intermediate.png)
